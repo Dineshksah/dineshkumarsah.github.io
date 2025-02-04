@@ -13,7 +13,6 @@
     </style>
 </head>
 <body>
-
     <nav>
         <a href="#home">Home</a>
         <a href="#projects">Projects</a>
@@ -28,44 +27,24 @@
         <p>Hello, I’m Dinesh Kumar Sah, a researcher in AI, ML, and Smart Networks.</p>
     </section>
 
-    <section id="projects">
-        <h1>Projects</h1>
-        <p>Coming Soon...</p>
-    </section>
-<!--
     <section id="publications">
         <h1>Publications</h1>
-        <p>Coming Soon...</p>
+        <ul id="papers-list">Loading papers...</ul>
     </section>
-    -->
-    <section id="publications">
-    <h1>Publications</h1>
-    <ul id="papers-list">Loading papers...</ul>
-</section>
 
-<script>
-fetch('papers.json')
-    .then(response => response.json())  // Read JSON file
-    .then(data => {
-        let papersList = document.getElementById("papers-list");
-        papersList.innerHTML = ""; // Clear previous content
-        data.forEach(paper => {
-            let listItem = `<li><a href="${paper.link}">${paper.title}</a> - ${paper.authors} (${paper.year})</li>`;
-            papersList.innerHTML += listItem;
-        });
-    })
-    .catch(error => console.error("Error loading JSON:", error));
-</script>
-
+    <section id="projects">
+        <h1>Projects</h1>
+        <ul id="projects-list">Loading projects...</ul>
+    </section>
 
     <section id="lectures">
         <h1>Lectures & Courses</h1>
-        <p>Coming Soon...</p>
+        <ul id="lectures-list">Loading lectures...</ul>
     </section>
 
     <section id="demos">
         <h1>Live Demos</h1>
-        <p>Coming Soon...</p>
+        <p>Interactive visualizations and graphs will be hosted here.</p>
     </section>
 
     <section id="contact">
@@ -75,5 +54,42 @@ fetch('papers.json')
         <p>GitHub: <a href="#">Your GitHub</a></p>
     </section>
 
+    <script>
+        // Fetch Publications
+        fetch('papers.json')
+            .then(response => response.json())
+            .then(data => {
+                let papersList = document.getElementById("papers-list");
+                papersList.innerHTML = "";
+                data.forEach(paper => {
+                    let listItem = `<li><a href="${paper.link}">${paper.title}</a> - ${paper.authors} (${paper.year})</li>`;
+                    papersList.innerHTML += listItem;
+                });
+            });
+        
+        // Fetch Projects
+        fetch('projects.json')
+            .then(response => response.json())
+            .then(data => {
+                let projectsList = document.getElementById("projects-list");
+                projectsList.innerHTML = "";
+                data.forEach(project => {
+                    let listItem = `<li><a href="${project.link}">${project.title}</a> - ${project.description} (${project.year})</li>`;
+                    projectsList.innerHTML += listItem;
+                });
+            });
+        
+        // Fetch Lectures
+        fetch('lectures.json')
+            .then(response => response.json())
+            .then(data => {
+                let lecturesList = document.getElementById("lectures-list");
+                lecturesList.innerHTML = "";
+                data.forEach(lecture => {
+                    let listItem = `<li>${lecture.title} - ${lecture.description} (${lecture.year}) [<a href="${lecture.slides}">Slides</a>] [<a href="${lecture.video}">Video</a>]</li>`;
+                    lecturesList.innerHTML += listItem;
+                });
+            });
+    </script>
 </body>
 </html>
