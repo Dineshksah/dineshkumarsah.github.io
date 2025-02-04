@@ -62,6 +62,32 @@
                     papersList.innerHTML += listItem;
                 });
             });
+
+<section id="publications">
+    <h1>Journal Publications</h1>
+    <ul id="journals-list">Loading journal papers...</ul>
+</section>
+
+<script>
+fetch('journals.json')
+    .then(response => response.json())
+    .then(data => {
+        let journalsList = document.getElementById("journals-list");
+        journalsList.innerHTML = "";
+        data.forEach(journal => {
+            let listItem = `<li>
+                <strong>${journal.title}</strong> - ${journal.authors} <br>
+                <em>${journal.journal}, ${journal.year} [Impact Factor: ${journal.impact_factor}]</em> <br>
+                <a href="${journal.link}" target="_blank">Read More</a>
+            </li><br>`;
+            journalsList.innerHTML += listItem;
+        });
+    })
+    .catch(error => console.error("Error loading journals:", error));
+</script>
+
+
+        
         
         // Fetch Projects
         fetch('projects.json')
