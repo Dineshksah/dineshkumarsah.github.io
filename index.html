@@ -24,12 +24,17 @@
 
     <section id="home">
         <h1>Welcome to My Website</h1>
-        <p>Hello, I’m Dinesh Kumar Sah, a researcher in Networking, communication,  AI, ML, and Automation</p>
+        <p>Hello, I’m Dinesh Kumar Sah, a researcher in Networking, Communication, AI, ML, and Automation.</p>
     </section>
 
     <section id="publications">
         <h1>Publications</h1>
         <ul id="papers-list">Loading papers...</ul>
+    </section>
+
+    <section id="journals">
+        <h1>Journal Publications</h1>
+        <ul id="journals-list">Loading journal papers...</ul>
     </section>
 
     <section id="projects">
@@ -47,9 +52,6 @@
         <p>Interactive visualizations and graphs will be hosted here.</p>
     </section>
 
-
-
-    
     <script>
         // Fetch Publications
         fetch('papers.json')
@@ -61,70 +63,33 @@
                     let listItem = `<li><a href="${paper.link}">${paper.title}</a> - ${paper.authors} (${paper.year})</li>`;
                     papersList.innerHTML += listItem;
                 });
-            });
+            })
+            .catch(error => console.error("Error loading papers:", error));
 
-<section id="publications">
-    <h1>Journal Publications</h1>
-    <ul id="journals-list">Loading journal papers...</ul>
-</section>
-
-<script>
-fetch('journals.json')
-    .then(response => response.json())
-    .then(data => {
-        let journalsList = document.getElementById("journals-list");
-        journalsList.innerHTML = "";
-        data.forEach(journal => {
-            let listItem = `<li>
-                <strong>${journal.title}</strong> - ${journal.authors} <br>
-                <em>${journal.journal}, ${journal.year} [Impact Factor: ${journal.impact_factor}]</em> <br>
-                <a href="${journal.link}" target="_blank">Read More</a>
-            </li><br>`;
-            journalsList.innerHTML += listItem;
-        });
-    })
-    .catch(error => console.error("Error loading journals:", error));
-</script>
-
-
-        
-        
-        // Fetch Projects
-        fetch('projects.json')
+        // Fetch Journal Publications
+        fetch('journals.json')
             .then(response => response.json())
             .then(data => {
-                let projectsList = document.getElementById("projects-list");
-                projectsList.innerHTML = "";
-                data.forEach(project => {
-                    let listItem = `<li><a href="${project.link}">${project.title}</a> - ${project.description} (${project.year})</li>`;
-                    projectsList.innerHTML += listItem;
+                let journalsList = document.getElementById("journals-list");
+                journalsList.innerHTML = "";
+                data.forEach(journal => {
+                    let listItem = `<li>
+                        <strong>${journal.title}</strong> - ${journal.authors} <br>
+                        <em>${journal.journal}, ${journal.year} [Impact Factor: ${journal.impact_factor}]</em> <br>
+                        <a href="${journal.link}" target="_blank">Read More</a>
+                    </li><br>`;
+                    journalsList.innerHTML += listItem;
                 });
-            });
-        
-        // Fetch Lectures
-        fetch('lectures.json')
-            .then(response => response.json())
-            .then(data => {
-                let lecturesList = document.getElementById("lectures-list");
-                lecturesList.innerHTML = "";
-                data.forEach(lecture => {
-                    let listItem = `<li>${lecture.title} - ${lecture.description} (${lecture.year}) [<a href="${lecture.slides}">Slides</a>] [<a href="${lecture.video}">Video</a>]</li>`;
-                    lecturesList.innerHTML += listItem;
-                });
-            });
+            })
+            .catch(error => console.error("Error loading journals:", error));
     </script>
-
-
-
-    
 
     <section id="contact">
         <h1>Contact</h1>
-        <p>Email: dks.iitd@gmail.com</p>
+        <p>Email: <a href="mailto:dks.iitd@gmail.com">dks.iitd@gmail.com</a></p>
         <p>LinkedIn: <a href="#">Your Profile</a></p>
-        <p>GitHub: <a href="#">dks.iitd@gmail.com</a></p>
+        <p>GitHub: <a href="#">Your GitHub</a></p>
     </section>
-
 
 </body>
 </html>
