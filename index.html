@@ -32,11 +32,31 @@
         <h1>Projects</h1>
         <p>Coming Soon...</p>
     </section>
-
+<!--
     <section id="publications">
         <h1>Publications</h1>
         <p>Coming Soon...</p>
     </section>
+    -->
+    <section id="publications">
+    <h1>Publications</h1>
+    <ul id="papers-list">Loading papers...</ul>
+</section>
+
+<script>
+fetch('papers.json')
+    .then(response => response.json())  // Read JSON file
+    .then(data => {
+        let papersList = document.getElementById("papers-list");
+        papersList.innerHTML = ""; // Clear previous content
+        data.forEach(paper => {
+            let listItem = `<li><a href="${paper.link}">${paper.title}</a> - ${paper.authors} (${paper.year})</li>`;
+            papersList.innerHTML += listItem;
+        });
+    })
+    .catch(error => console.error("Error loading JSON:", error));
+</script>
+
 
     <section id="lectures">
         <h1>Lectures & Courses</h1>
