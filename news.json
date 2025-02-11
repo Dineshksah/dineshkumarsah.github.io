@@ -1,0 +1,20 @@
+[
+    {
+        "title": "New Research Paper Published!",
+        "date": "2025-02-10",
+        "description": "Our latest research on federated learning for IoT devices has been published in Elsevier.",
+        "link": "https://www.sciencedirect.com/science/article/abs/pii/S1574013717301971"
+    },
+    {
+        "title": "Invited Talk at AI Conference",
+        "date": "2025-03-01",
+        "description": "Dinesh Kumar Sah will be delivering a keynote speech at the AI & ML Global Summit.",
+        "link": "https://www.aimlsummit.com/speakers"
+    },
+    {
+        "title": "New Project Collaboration",
+        "date": "2025-04-15",
+        "description": "We have started a new collaboration on AI-driven networking with a leading research institute.",
+        "link": "https://www.example.com/project-details"
+    }
+]
