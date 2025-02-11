@@ -87,6 +87,26 @@
             .catch(error => console.error("Error loading journals:", error));
     </script>
 
+
+    <script>
+    fetch('news.json')
+        .then(response => response.json())
+        .then(data => {
+            let newsList = document.getElementById("news-list");
+            newsList.innerHTML = "";
+            data.forEach(news => {
+                let listItem = `<li>
+                    <strong>${news.title}</strong> - <em>${news.date}</em> <br>
+                    ${news.description} <br>
+                    <a href="${news.link}" target="_blank">Read More</a>
+                </li><br>`;
+                newsList.innerHTML += listItem;
+            });
+        })
+        .catch(error => console.error("Error loading news:", error));
+</script>
+
+
     <section id="news">
     <h1>Latest News</h1>
     <ul id="news-list">Loading news...</ul>
