@@ -221,8 +221,9 @@
       const ipResponse = await fetch('https://api.ipify.org?format=json');
       const ipData = await ipResponse.json();
       const visitorIP = ipData.ip;
+const locationResponse = await fetch(`https://cors-anywhere.herokuapp.com/https://ipapi.co/${visitorIP}/json/`);
 
-      const locationResponse = await fetch(`https://ipapi.co/${visitorIP}/json/`);
+      // const locationResponse = await fetch(`https://ipapi.co/${visitorIP}/json/`);
       const locationData = await locationResponse.json();
 
       const visitorData = {
