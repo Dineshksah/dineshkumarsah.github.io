@@ -31,7 +31,6 @@
     </section>
 
 
-
     <section id="journals">
         <h1>Journal Publications</h1>
         <ul id="journals-list">Loading journal papers...</ul>
@@ -59,17 +58,6 @@
 
     <script>
         // Fetch Publications
-        fetch('papers.json')
-            .then(response => response.json())
-            .then(data => {
-                let papersList = document.getElementById("papers-list");
-                papersList.innerHTML = "";
-                data.forEach(paper => {
-                    let listItem = `<li><a href="${paper.link}">${paper.title}</a> - ${paper.authors} (${paper.year})</li>`;
-                    papersList.innerHTML += listItem;
-                });
-            })
-            .catch(error => console.error("Error loading papers:", error));
 
         // Fetch Journal Publications
         fetch('journals.json')
@@ -87,6 +75,19 @@
                 });
             })
             .catch(error => console.error("Error loading journals:", error));
+
+
+                fetch('papers.json')
+            .then(response => response.json())
+            .then(data => {
+                let papersList = document.getElementById("papers-list");
+                papersList.innerHTML = "";
+                data.forEach(paper => {
+                    let listItem = `<li><a href="${paper.link}">${paper.title}</a> - ${paper.authors} (${paper.year})</li>`;
+                    papersList.innerHTML += listItem;
+                });
+            })
+            .catch(error => console.error("Error loading papers:", error));
     </script>
 
 
