@@ -1,50 +1,42 @@
 [
+
   {
-    "title": "Federated Learning on Edge Devices for Industrial Internet of Things",
-    "authors": "DKSah, Maryam Vahabi, Hossein Fotouhi",
-    "journal": "Sustainable Computing: Informatics and Systems, Elsevier",
-    "year": 2025,
-    "impact_factor": 3.8,
-    "link": "https://www.sciencedirect.com/science/article/abs/pii/S1574013717301971"
+    "title": "Reinforcement Learning Infused MAC for Adaptive Connectivity",
+    "authors": "Dinesh Kumar Sah et al.",
+    "conference": "IEEE Wireless Communications and Networking Conference (WCNC-24)",
+    "year": 2024,
+    "location": "Dubai, UAE",
+    "link": "https://www.example.com/conference-paper1",
+    "type": "Conference"
   },
   {
-    "title": "Parametric survey on cross-layer designs for wireless sensor networks",
-    "authors": "Dinesh Kumar Sah, Tarachand Amgoth",
-    "journal": "Computer Science Review, Elsevier",
+    "title": "Optimizing Resource Utilization using Vector Databases in Green Internet of Things",
+    "authors": "Kumari Rani, Dinesh Kumar Sah et al.",
+    "conference": "IEEE Globecom Workshops",
+    "year": 2023,
+    "location": "Kuala Lumpur, Malaysia",
+    "link": "https://www.example.com/conference-paper2",
+    "type": "Conference"
+  },
+  {
+    "title": "5G Applications and Architectures",
+    "authors": "Dinesh Kumar Sah, D. Praveen Kumar, Chaya Shivalingagowda, P. V. Y. Jayasree",
+    "book": "5G Enabled Secure Wireless Networks",
+    "publisher": "Springer",
     "year": 2018,
-    "impact_factor": 13.3,
-    "link": "https://www.sciencedirect.com/science/article/abs/pii/S1574013717301971"
+    "chapter": 2,
+    "pages": "45-68",
+    "link": "https://link.springer.com/chapter/10.1007/978-3-030-03508-2_2",
+    "type": "Book Chapter"
   },
   {
-    "title": "3D Localization and Error Minimization in Underwater Sensor Networks",
-    "authors": "Dinesh Kumar Sah, Tarachand Amgoth, Korhan Cengiz et al.",
-    "journal": "ACM Transactions on Sensor Networks",
-    "year": 2021,
-    "impact_factor": 3.9,
-    "link": "https://doi.org/10.1145/3460435"
-  },
-  {
-    "title": "TDMA driven MAC for Nodes Scheduling in Wireless Sensor Networks: A Q-learning approach",
-    "authors": "Dinesh Kumar Sah, Tarachand Amgoth, Korhan Cengiz et al.",
-    "journal": "Sustainable Energy Technologies and Assessments",
-    "year": 2021,
-    "impact_factor": 7.1,
-    "link": "https://www.sciencedirect.com/science/article/abs/pii/S221313882200580X"
-  },
-  {
-    "title": "EDGF: Empirical dataset generation framework for wireless network networks",
-    "authors": "Dinesh Kumar Sah, Korhan Cengiz, Tarachand Amgoth et al.",
-    "journal": "Computer Communication",
-    "year": 2021,
-    "impact_factor": 4.5,
-    "link": "https://www.sciencedirect.com/science/article/abs/pii/S014036642100311X"
-  },
-  {
-    "title": "Retinal Imaging based Glaucoma Detection using Modified Pelican Optimization based Extreme Learning Machine",
-    "authors": "Debendra Muduli, Dinesh Kumar Sah et al.",
-    "journal": "Scientific Reports, Nature Publishing Group UK London",
-    "year": 2025,
-    "impact_factor": 3.8,
-    "link": "https://www.sciencedirect.com/science/article/abs/pii/S1574013717301971"
+    "title": "Optimization techniques in Wireless Sensor Networks",
+    "authors": "Dinesh Kumar Sah, D Praveen Kumar, Chaya",
+    "book": "Soft Computing in Wireless Sensor Networks",
+    "publisher": "CRC Publications",
+    "year": 2018,
+    "chapter": 2,
+    "link": "https://www.example.com/book-chapter2",
+    "type": "Book Chapter"
   }
 ]
