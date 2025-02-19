@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lecture Slides</title>
+</head>
+<body>
+    <h1 id="subject-title">Lecture Slides</h1>
+    <ul id="slide-list">Loading slides...</ul>
+
+    <script>
+        // Get subject name from URL (example: ?subject=os)
+        const urlParams = new URLSearchParams(window.location.search);
+        const subject = urlParams.get('subject');
+
+        // Set the page title dynamically
+        document.getElementById("subject-title").innerText = subject.replace("-", " ").toUpperCase();
+
+        // Fetch the slides for the selected subject
+        fetch(`slides/${subject}-slides.json`)
+            .then(response => response.json())
+            .then(data => {
+                let slideList = document.getElementById("slide-list");
+                slideList.innerHTML = "";
+                data.forEach(slide => {
+                    let listItem = `<li>
+                        <strong>${slide.title}</strong> - ${slide.description} <br>
+                        <a href="${slide.link}" target="_blank">Download PDF/PPT</a>
+                        ${slide.video ? `<br><a href="${slide.video}" target="_blank">Watch Video</a>` : ""}
+                    </li><br>`;
+                    slideList.innerHTML += listItem;
+                });
+            })
+            .catch(error => console.error("Error loading slides:", error));
+    </script>
+</body>
+</html>
