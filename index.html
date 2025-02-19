@@ -61,10 +61,30 @@
         <ul id="projects-list">Loading projects...</ul>
     </section>
 
-    <section id="lectures">
-        <h1>Lectures & Courses</h1>
-        <ul id="lectures-list">Loading lectures...</ul>
-    </section>
+<section id="lectures">
+    <h1>Lectures & Courses</h1>
+    <ul id="lectures-list">Loading lectures...</ul>
+</section>
+
+<script>
+    // Fetch subjects from lectures.json
+    fetch('lectures.json')
+        .then(response => response.json())
+        .then(data => {
+            let lecturesList = document.getElementById("lectures-list");
+            lecturesList.innerHTML = "";
+            data.forEach(lecture => {
+                let listItem = `<li>
+                    <strong>${lecture.title}</strong> - ${lecture.description} <br>
+                    <a href="slides/${lecture.page}" target="_blank">
+                        <button>View Slides</button>
+                    </a>
+                </li><br>`;
+                lecturesList.innerHTML += listItem;
+            });
+        })
+        .catch(error => console.error("Error loading lectures:", error));
+</script>
 
     <section id="demos">
         <h1>Live Demos</h1>
