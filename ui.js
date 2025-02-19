@@ -1,6 +1,7 @@
 document.addEventListener("DOMContentLoaded", function () {
     let navbar = document.querySelector("nav");
 
+    // Sticky Navbar on Scroll
     window.addEventListener("scroll", function () {
         if (window.scrollY > 50) {
             navbar.classList.add("scrolled");
@@ -8,26 +9,22 @@ document.addEventListener("DOMContentLoaded", function () {
             navbar.classList.remove("scrolled");
         }
     });
-});
 
+    // Apply fade-in animation when scrolling
+    let fadeElements = document.querySelectorAll(".fade-in");
 
-
-// document.addEventListener("DOMContentLoaded", function () {
-//     // Apply fade-in animation when scrolling
-//     let fadeElements = document.querySelectorAll(".fade-in");
-
-//     function checkFadeIn() {
-//         fadeElements.forEach(element => {
-//             let position = element.getBoundingClientRect().top;
-//             let windowHeight = window.innerHeight;
-//             if (position < windowHeight - 50) {
-//                 element.classList.add("visible");
-//             }
-//         });
-//     }
+    function checkFadeIn() {
+        fadeElements.forEach(element => {
+            let position = element.getBoundingClientRect().top;
+            let windowHeight = window.innerHeight;
+            if (position < windowHeight - 50) {
+                element.classList.add("visible");
+            }
+        });
+    }
 
     window.addEventListener("scroll", checkFadeIn);
-    checkFadeIn();
+    checkFadeIn(); // Run once when the page loads
 
     // Smooth Scroll for Navbar Links & Highlight Active Section
     let navLinks = document.querySelectorAll("nav a");
