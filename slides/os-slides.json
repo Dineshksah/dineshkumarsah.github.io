@@ -1,0 +1,20 @@
+[
+    {
+        "title": "Module 1: Introduction to OS",
+        "description": "Overview of Operating Systems, types, and functions.",
+        "link": "https://drive.google.com/uc?export=download&id=1aw1Z-0f-qfuoxq7jv-nGcpvjs8mGUUCh",
+        "video": ""
+    },
+    {
+        "title": "Module 2: Process Management",
+        "description": "Concepts of process scheduling, IPC, and threading.",
+        "link": "https://drive.google.com/uc?export=download&id=1QFsJ4O_1aoY23GxnDz2uxzXDITX00trz",
+        "video": ""
+    },
+    {
+        "title": "Module 3: Memory Management",
+        "description": "Paging, segmentation, and virtual memory.",
+        "link": "https://drive.google.com/uc?export=download&id=1wYYcnMrh2fq9tfoM5uyBKecu_MfpPnPh",
+        "video": ""
+    }
+]
