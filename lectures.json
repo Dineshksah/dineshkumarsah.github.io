@@ -1,16 +1,18 @@
 [
-  {
-    "title": "Introduction to Machine Learning",
-    "description": "A course covering fundamental ML algorithms.",
-    "year": 2024,
-    "slides": "https://example.com/ml-slides.pdf",
-    "video": "https://www.youtube.com/watch?v=ML_lecture"
-  },
-  {
-    "title": "Network Security Fundamentals",
-    "description": "A lecture on cybersecurity and cryptography.",
-    "year": 2023,
-    "slides": "https://example.com/security-slides.pdf",
-    "video": "https://www.youtube.com/watch?v=security_course"
-  }
+    {
+        "title": "Operating Systems",
+        "description": "Covers process management, scheduling, memory management, and file systems.",
+        "page": "os-slides.html"
+    },
+    {
+        "title": "Computer Networks",
+        "description": "Networking fundamentals, TCP/IP, routing, network security, and protocols.",
+        "page": "network-slides.html"
+    },
+    {
+        "title": "Machine Learning",
+        "description": "Supervised and unsupervised learning, neural networks, deep learning basics.",
+        "page": "ml-slides.html"
+    }
 ]
+
