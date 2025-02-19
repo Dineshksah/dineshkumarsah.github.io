@@ -15,7 +15,7 @@ document.addEventListener("DOMContentLoaded", function () {
     window.addEventListener("scroll", checkFadeIn);
     checkFadeIn();
 
-    // Smooth Scroll for Navbar Links
+    // Smooth Scroll for Navbar Links & Highlight Active Section
     let navLinks = document.querySelectorAll("nav a");
 
     navLinks.forEach(link => {
@@ -23,6 +23,14 @@ document.addEventListener("DOMContentLoaded", function () {
             e.preventDefault();
             let targetId = this.getAttribute("href").substring(1);
             let targetSection = document.getElementById(targetId);
+            
+            // Remove 'active' class from all links
+            navLinks.forEach(nav => nav.classList.remove("active"));
+
+            // Add 'active' class to clicked link
+            this.classList.add("active");
+
+            // Scroll smoothly
             targetSection.scrollIntoView({ behavior: "smooth" });
         });
     });
