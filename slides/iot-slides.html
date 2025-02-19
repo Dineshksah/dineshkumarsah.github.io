@@ -1,1 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IoT - Lecture Slides</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; padding: 20px; }
+        h1 { text-align: center; color: #333; }
+        ul { list-style-type: none; padding: 0; }
+        li { background: #f4f4f4; padding: 10px; margin: 10px 0; border-radius: 5px; }
+        a { text-decoration: none; color: #007bff; font-weight: bold; }
+    </style>
+</head>
+<body>
+
+    <h1>IoT - Lecture Slides</h1>
+    <ul id="slides-list">Loading slides...</ul>
+
+    <script>
+        fetch('iot-slides.json') // Load JSON dynamically
+            .then(response => response.json())
+            .then(data => {
+                let slidesList = document.getElementById("slides-list");
+                slidesList.innerHTML = "";
+                data.forEach(slide => {
+                    let listItem = `<li>
+                        <strong>${slide.title}</strong> - ${slide.description} <br>
+                        <a href="${slide.link}" target="_blank">Download</a>
+                    </li><br>`;
+                    slidesList.innerHTML += listItem;
+                });
+            })
+            .catch(error => console.error("Error loading slides:", error));
+    </script>
+
+</body>
+</html>
+
 
