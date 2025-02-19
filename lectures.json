@@ -13,11 +13,7 @@
         "title": "Machine Learning",
         "description": "Supervised and unsupervised learning, neural networks, deep learning basics.",
         "page": "ml-slides.html"
-    }
-
-
-
-
+    },
     {
         "title": "Artificial Intelligence",
         "description": "Overview of AI techniques and algorithms",
@@ -33,8 +29,6 @@
         "description": "Python programming basics and advanced topics",
         "page": "python-slides.html"
     }
-
-
     
 ]
 
