@@ -1,16 +1,30 @@
 document.addEventListener("DOMContentLoaded", function () {
-    // Apply fade-in animation when scrolling
-    let fadeElements = document.querySelectorAll(".fade-in");
+    let navbar = document.querySelector("nav");
 
-    function checkFadeIn() {
-        fadeElements.forEach(element => {
-            let position = element.getBoundingClientRect().top;
-            let windowHeight = window.innerHeight;
-            if (position < windowHeight - 50) {
-                element.classList.add("visible");
-            }
-        });
-    }
+    window.addEventListener("scroll", function () {
+        if (window.scrollY > 50) {
+            navbar.classList.add("scrolled");
+        } else {
+            navbar.classList.remove("scrolled");
+        }
+    });
+});
+
+
+
+// document.addEventListener("DOMContentLoaded", function () {
+//     // Apply fade-in animation when scrolling
+//     let fadeElements = document.querySelectorAll(".fade-in");
+
+//     function checkFadeIn() {
+//         fadeElements.forEach(element => {
+//             let position = element.getBoundingClientRect().top;
+//             let windowHeight = window.innerHeight;
+//             if (position < windowHeight - 50) {
+//                 element.classList.add("visible");
+//             }
+//         });
+//     }
 
     window.addEventListener("scroll", checkFadeIn);
     checkFadeIn();
