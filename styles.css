@@ -14,7 +14,7 @@ body {
 }
 
 .scrollable-container {
-    max-height: 50px;  /* Adjust height based on your preference */
+    max-height: 400px;  /* Adjust height based on your preference */
     overflow-y: auto;   /* Enables vertical scrolling */
     border: 1px solid #ddd;  /* Optional: Light border for a clean look */
     padding: 10px;
