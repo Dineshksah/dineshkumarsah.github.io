@@ -8,7 +8,7 @@ body {
 
 /* Fix Alignment: Add Padding */
 .container {
-    max-width: 900px; /* Adjust width */
+    max-width: 1200px; /* Adjust width */
     margin: 0 auto; /* Center content */
     padding: 20px;
 }
