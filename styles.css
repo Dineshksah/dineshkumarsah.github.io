@@ -13,6 +13,16 @@ body {
     padding: 20px;
 }
 
+.scrollable-container {
+    max-height: 300px;  /* Adjust height based on your preference */
+    overflow-y: auto;   /* Enables vertical scrolling */
+    border: 1px solid #ddd;  /* Optional: Light border for a clean look */
+    padding: 10px;
+    background: #f9f9f9;  /* Light background for contrast */
+}
+
+
+
 /* Section Styling */
 section {
     padding: 60px 20px;
